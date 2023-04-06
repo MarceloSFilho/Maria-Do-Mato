@@ -1,3 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: whitesmoke;
+}
 .carousel {
   cursor: grab;
 }
@@ -31,4 +40,32 @@
   margin: 0;
   color: #527156;
   font-weight: bold;
+}
+
+.a-btn-view-more {
+  text-align: center;
+}
+
+.jf-right {
+  justify-content: right;
+  display: flex;
+  margin-top: -220px;
+}
+
+.col-6 {
+  padding: 0px 20px 0px 0;
+  width: 60%;
+}
+
+.h-prayer {
+  text-align: right;
+}
+
+.p-prayer {
+  font-size: 13px;
+  text-align: right;
+}
+
+.line-green {
+  margin-top: -40px;
 }
