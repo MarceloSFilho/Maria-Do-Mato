@@ -1,0 +1,10 @@
+<h1>Products Show</h1>
+
+<p>Nome: <%= @product.name %></p>
+<p>foto: <%= @product.photo %></p>
+<p>Descrição: <%= @product.description %></p>
+<p>Preço: <%= @product.price %></p>
+
+<%= link_to 'Edit', edit_product_path(@product) %>
+
+<%= link_to 'remove this product', product_path, method: :delete %>
