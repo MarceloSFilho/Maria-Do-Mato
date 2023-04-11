@@ -1,3 +1,22 @@
-<h1>Edit Product</h1>
-
-<%= render '/shared/form', product: @product %>
+<div class="container">
+  <h1 class="text-center mt-50">Editar Produto</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="edit-session">
+      <img src="https://terramor.com.br/wp-content/uploads/2021/08/CAPA-1-10.jpg" height="400px">
+      <div class="product-edit">
+        <p class="text-c-products-highlight"><%= @product.name.capitalize %></p>
+        <p class="price-products-highlight">R$<%= @product.price %></p>
+        <hr>
+        <div class="description-edit">
+          <h2>Descrição</h2>
+          <%= @product.description %>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="col-md-6">
+      <%= render '/shared/form', product: @product %>
+    </div>
+  </div>
+</div>
