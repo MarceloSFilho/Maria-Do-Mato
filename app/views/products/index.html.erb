@@ -1,9 +1,29 @@
-<h1>All Products</h1>
 
-<ul>
+<div class="container">
+
+  <div class="row product-wrapper">
+
   <% @products.each do |product| %>
-    <li><%= link_to product.name, product_path(product) %></li>
+
+    <div class="col-md-3 highlight-session">
+
+    <div data-controller="on-hover">
+      <div class="img-container">
+        <img src="https://terramor.com.br/wp-content/uploads/2021/08/CAPA-1-10.jpg" data-action="mouseover->on-hover#revealContent">
+      </div>
+      <button data-on-hover-target="infos" class="d-none button-card" >
+        Comprar
+      </button>
+
+    </div>
+
+      <div class="product-price">
+        <p class="text-c-products-highlight"><%= product.name.capitalize %></p>
+        <p class="price-products-highlight">R$<%=product.price %></p>
+      </div>
+    </div>
   <% end %>
-</ul>
+  </div>
+</div>
 
 <%= link_to 'new product', new_product_path %>

@@ -14,3 +14,18 @@
     border-right: none;
   }
 }
+
+.button-card {
+  background-color: #527156;
+  opacity: 0.7;
+  position: absolute;
+  margin-top: -40px;
+  height: 40px;
+  width: 266px;
+  font-weight: bold;
+  color: white;
+  border: 0px;
+  &:hover {
+    opacity: 1;
+  }
+}
