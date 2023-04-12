@@ -1,12 +1,14 @@
 .btn-view-more {
   width: 250px;
-  border: 1px solid rgb(36, 36, 36);
-  color: rgb(36, 36, 36);
+  border: 1px solid #242424;
+  color: #242424;
+  display: block;
   border-left: none;
   border-right: none;
-  height: 50px;
+  padding: 20px;
   background: whitesmoke;
   margin-bottom: 50px;
+  text-decoration: none;
   &:hover {
     border: 1px solid black;
     color: black;
