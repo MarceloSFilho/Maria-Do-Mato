@@ -1,9 +1,31 @@
-<h1>Products Show</h1>
-
-<p>Nome: <%= @product.name %></p>
-<p>foto: <%= @product.photo %></p>
-<p>Descrição: <%= @product.description %></p>
-<p>Preço: <%= @product.price %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 spacing-photo">
+      <div class="img-show">
+        <img src="https://terramor.com.br/wp-content/uploads/2021/08/CAPA-1-10.jpg" >
+      </div>
+    </div>
+    <div class="col-md-6 spacing-top">
+      <div class="content-product">
+        <div class="show-product-name">
+          <%= @product.name.upcase %>
+        </div>
+        <div class="show-product-price">
+          R$ <%= @product.price %>
+        </div>
+        <div class="buttons-buy-show-align">
+          <button class="buttons-buy-show">COMPRAR</button>
+          <button class="buttons-buy-show">ADICIONAR NO CARRINHO</button>
+        </div>
+        <hr>
+        <div class="show-product-description">
+          <h2 class="description-h2">Descrição</h2>
+          <%= @product.description %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_product_path(@product) %>
 
