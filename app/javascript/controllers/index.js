@@ -7,5 +7,8 @@ import { application } from "./application"
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import OnClickController from "./on_click_controller"
+application.register("on-click", OnClickController)
+
 import OnHoverController from "./on_hover_controller"
 application.register("on-hover", OnHoverController)

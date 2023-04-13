@@ -10,4 +10,8 @@ export default class extends Controller {
   revealContent() {
     this.infosTarget.classList.remove("d-none")
   }
+
+  addContent() {
+    this.infosTarget.classList.add("d-none")
+  }
 }
