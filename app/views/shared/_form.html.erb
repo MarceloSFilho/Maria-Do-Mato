@@ -1,7 +1,19 @@
 <%= simple_form_for @product do |f| %>
-  <%= f.input :photo, as: :file%>
-  <%= f.input :name %>
-  <%= f.input :price %>
-  <%= f.input :description %>
+  <%= f.input :photo, as: :file,
+               required: true %>
+
+  <%= f.input :name,
+               placeholder: "Digite o nome do produto...",
+               required: true,
+               autofocus: true %>
+
+  <%= f.input :price,
+               placeholder: "Digite o preço do produto...",
+               required: true %>
+
+  <%= f.input :description,
+               placeholder: "Digite a descrição do produto...",
+               required: true %>
+
   <%= f.button :submit %>
 <% end %>
