@@ -9,13 +9,9 @@
 
       <div data-controller="on-hover">
         <div class="img-container">
-          <img src="https://terramor.com.br/wp-content/uploads/2021/08/CAPA-1-10.jpg"
-          data-action=
-          "mouseover->on-hover#revealContent
-          mouseout->on-hover#addContent" >
+          <%= link_to cl_image_tag product.photo.key, height: 400, width: 300, class:"photo-edit", data: {action: "mouseover->on-hover#revealContent mouseout->on-hover#addContent"} %>
         </div>
         <button
-
         data-action=
         "mouseover->on-hover#revealContent
         mouseout->on-hover#addContent"

@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-md-6">
       <div class="edit-session">
-        <img src="https://terramor.com.br/wp-content/uploads/2021/08/CAPA-1-10.jpg" height="400px">
+        <%= cl_image_tag @product.photo.key, height: 400, width: 300, class:"photo-edit" %>
         <div class="product-edit">
           <p class="text-c-products-highlight"><%= @product.name.capitalize %></p>
           <p class="price-products-highlight">R$<%= @product.price %></p>
