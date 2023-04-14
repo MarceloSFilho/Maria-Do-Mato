@@ -47,6 +47,7 @@ hr {
   height: 100%;
   -webkit-transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
+  object-fit: cover;
 }
 
 .img-show:hover img{
