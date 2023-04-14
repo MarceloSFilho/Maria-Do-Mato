@@ -11,6 +11,11 @@
                placeholder: "Digite o preço do produto...",
                required: true %>
 
+  <%= f.input :category,
+               collection: Filter::CATEGORYS,
+               placeholder: "Digite a categoria do produto...",
+               include_blank: false %>
+
   <%= f.input :description,
                placeholder: "Digite a descrição do produto...",
                required: true %>
