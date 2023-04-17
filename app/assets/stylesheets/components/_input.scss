@@ -1,0 +1,41 @@
+.form-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  background: white;
+  position: absolute;
+  transform: translate(-170px, -10px);
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.input-edit .form-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  background: white;
+  position: absolute;
+  transform: translate(40px, -10px);
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-control {
+  border: 1px solid #527156;
+  border-top: 5px solid #527156;
+  border-radius: 20px;
+  width: 400px;
+  background-color: white;
+}
+
+.form-select {
+  border: 1px solid #527156;
+  border-top: 5px solid #527156;
+  border-radius: 20px;
+  width: 400px;
+  background-color: white;
+}
+
+.form-actions {
+  display: inline-flex;
+}

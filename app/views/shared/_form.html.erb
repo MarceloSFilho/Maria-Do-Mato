@@ -1,24 +1,29 @@
 <%= simple_form_for @product do |f| %>
   <%= f.input :photo, as: :file,
+               label: :Foto,
                required: true %>
 
   <%= f.input :name,
+               label: :Nome,
                placeholder: "Digite o nome do produto...",
                required: true,
                autofocus: true %>
 
   <%= f.input :price,
+               label: :Preço,
                placeholder: "Digite o preço do produto...",
                required: true %>
 
   <%= f.input :category,
+               label: :Categoria,
                collection: Filter::CATEGORYS,
                placeholder: "Digite a categoria do produto...",
                include_blank: false %>
 
   <%= f.input :description,
+               label: :Descrição,
                placeholder: "Digite a descrição do produto...",
                required: true %>
 
-  <%= f.button :submit %>
+  <%= f.button :submit, class:"button-confirm" %>
 <% end %>

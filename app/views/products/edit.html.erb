@@ -1,7 +1,7 @@
 <div class="container">
   <h1 class="text-center mt-50">Editar Produto</h1>
   <div class="row">
-    <div class="col-md-6">
+    <div class="col">
       <div class="edit-session">
         <%= cl_image_tag @product.photo.key, height: 400, width: 300, class:"photo-edit" %>
         <div class="product-edit">
@@ -15,8 +15,36 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6">
-      <%= render '/shared/form', product: @product %>
+    <div class="col">
+      <%= simple_form_for @product, html: {class:"input-edit"} do |f| %>
+        <%= f.input :photo, as: :file,
+                    label: :Foto,
+                    required: true %>
+
+        <%= f.input :name,
+                    label: :Nome,
+                    placeholder: "Digite o nome do produto...",
+                    required: true,
+                    autofocus: true, class:"safadinhosemvergonhadocaralhaasjasjasij" %>
+
+        <%= f.input :price,
+                    label: :Preço,
+                    placeholder: "Digite o preço do produto...",
+                    required: true %>
+
+        <%= f.input :category,
+                    label: :Categoria,
+                    collection: Filter::CATEGORYS,
+                    placeholder: "Digite a categoria do produto...",
+                    include_blank: false %>
+
+        <%= f.input :description,
+                    label: :Descrição,
+                    placeholder: "Digite a descrição do produto...",
+                    required: true %>
+
+        <%= f.button :submit, class:"button-confirm" %>
+      <% end %>
     </div>
   </div>
 </div>
