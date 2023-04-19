@@ -54,3 +54,10 @@ hr {
   -webkit-transform: scale(1.5);
   transform: scale(1.5);
 }
+
+.buttons-show {
+  margin-top: 30px;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+}
