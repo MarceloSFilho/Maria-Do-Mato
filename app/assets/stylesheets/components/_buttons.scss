@@ -48,14 +48,30 @@ background: #527156;
 
 .button-confirm {
   padding: 10px;
-width: 250px;
-border: 0;
-color: white;
-font-weight: 500;
-margin: 50px 10px 0px 0px;
-background: #527156;
+  width: 250px;
+  border: 0;
+  color: white;
+  font-weight: 500;
+  margin: 50px 10px 0px 0px;
+  background: #527156;
+  text-decoration: none;
   &:hover {
     background: #4f6652;
+    color: white;
+  }
+}
+
+.button-delete {
+  padding: 10px;
+  width: 250px;
+  border: 0;
+  color: white;
+  font-weight: 500;
+  margin: 50px 10px 0px 0px;
+  background: #e42a2a;
+  text-decoration: none;
+  &:hover {
+    background: #b92020;
     color: white;
   }
 }
