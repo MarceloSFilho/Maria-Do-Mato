@@ -32,12 +32,6 @@
                     placeholder: "Digite o preço do produto...",
                     required: true %>
 
-        <%= f.input :category,
-                    label: :Categoria,
-                    collection: Filter::CATEGORYS,
-                    placeholder: "Digite a categoria do produto...",
-                    include_blank: false %>
-
         <%= f.input :description,
                     label: :Descrição,
                     placeholder: "Digite a descrição do produto...",

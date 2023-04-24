@@ -14,7 +14,10 @@
           R$ <%= @product.price %>
         </div>
         <div class="buttons-buy-show-align">
-          <button class="buttons-buy-show">COMPRAR</button>
+          <%= form_with url: orders_path do %>
+            <%= hidden_field_tag 'product_id', @product.id %>
+            <%= submit_tag 'COMPRAR', class: 'buttons-buy-show' %>
+          <% end %>
           <button class="buttons-buy-show">ADICIONAR NO CARRINHO</button>
         </div>
         <hr>

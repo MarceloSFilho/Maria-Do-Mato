@@ -1,9 +1,10 @@
 class Filter < ApplicationRecord
   belongs_to :product
 
-  CATEGORYS = ["Macramê",
+  CATEGORYS = [
+    "Macramê",
     "Vela",
-    "Sabonete" ]
+    "Cerâmica" ]
 
     validates :category, uniqueness: {scope: :product}
     validate :less_than_one
