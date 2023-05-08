@@ -7,7 +7,6 @@ class ProductsController < ApplicationController
   end
 
   def show
-    authorize @product
   end
 
   def new
@@ -23,19 +22,16 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    authorize @product
   end
 
   def update
     @product.update(product_params)
     redirect_to product_path(@product)
-    authorize @product
   end
 
   def destroy
     @product.destroy
     redirect_to products_path
-    authorize @product
   end
 
   private
@@ -46,5 +42,6 @@ class ProductsController < ApplicationController
 
   def set_product
     @product = Product.find(params[:id])
+    authorize @product
   end
 end
