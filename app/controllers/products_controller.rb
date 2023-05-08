@@ -3,33 +3,39 @@ class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @products = Product.all
+    @products = policy_scope(Product)
   end
 
   def show
+    authorize @product
   end
 
   def new
     @product = Product.new
+    authorize @product
   end
 
   def create
     @product = Product.new(product_params)
     @product.save
     redirect_to product_path(@product)
+    authorize @product
   end
 
   def edit
+    authorize @product
   end
 
   def update
     @product.update(product_params)
     redirect_to product_path(@product)
+    authorize @product
   end
 
   def destroy
     @product.destroy
     redirect_to products_path
+    authorize @product
   end
 
   private
