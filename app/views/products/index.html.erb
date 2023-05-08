@@ -11,17 +11,11 @@
         <div class="img-container">
           <%= link_to cl_image_tag(product.photo.key, height: 400, width: 300, class:"photo-edit", data: {action: "mouseover->on-hover#revealContent mouseout->on-hover#addContent"}), product_path(product) %>
         </div>
-        <button
-
-        data-action=
-        "mouseover->on-hover#revealContent
-        mouseout->on-hover#addContent"
-
-        data-on-hover-target="infos"
-        class="d-none button-card" >
-          Comprar
-        </button>
-      </div>
+          <%= form_with url: orders_path do %>
+            <%= hidden_field_tag 'product_id', product.id %>
+            <%= submit_tag 'COMPRAR', class:'button-card d-none', data: {on_hover_target: "infos", action: "mouseover->on-hover#revealContent mouseout->on-hover#addContent"}%>
+          <% end %>
+        </div>
 
       <div class="product-price">
         <p class="text-c-products-highlight"><%= product.name.capitalize %></p>
