@@ -75,3 +75,19 @@ background: #527156;
     color: white;
   }
 }
+
+.whatsapp {
+  padding-right: 3px;
+  padding-left: 3px;
+  color: white;
+  background: rgb(11, 202, 11);
+  border-radius: 50%;
+  font-size: 45px;
+  box-shadow: gray 0px 0px 7px;
+  margin-right: 15px;
+  position: fixed;
+  right: 0%;
+  bottom: 9%;
+  z-index: 10;
+  cursor: pointer;
+}
