@@ -12,7 +12,7 @@ class OrdersController < ApplicationController
           product_data: {
             name: product.name,
             description: product.description,
-            images: [product.photo.key],
+            images: ["https://res.cloudinary.com/dzwp78was/image/upload/v1683576751/development/#{product.photo.key}"],
           },
         },
         quantity: 1,
