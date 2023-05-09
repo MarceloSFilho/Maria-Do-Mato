@@ -5,7 +5,7 @@
   display: block;
   border-left: none;
   border-right: none;
-  padding: 20px;
+  padding: 15px;
   background: white;
   margin-bottom: 50px;
   text-decoration: none;
@@ -33,13 +33,13 @@
 }
 
 .buttons-buy-show {
-padding: 10px;
-width: 250px;
-border: 0;
-color: white;
-font-weight: 500;
-margin: 50px 10px 0px 0px;
-background: #527156;
+  padding: 10px;
+  width: 250px;
+  border: 0;
+  color: white;
+  font-weight: 500;
+  margin: 50px 10px 0px 0px;
+  background: #527156;
   &:hover {
     background: #4f6652;
     color: white;

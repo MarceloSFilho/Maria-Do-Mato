@@ -18,6 +18,9 @@ class OrdersController < ApplicationController
         quantity: 1,
         }],
         mode: 'payment',
+        discounts: [{
+          coupon: '{{iZvqIBkv}}',
+        }],
         success_url: order_url(order),
       )
 
