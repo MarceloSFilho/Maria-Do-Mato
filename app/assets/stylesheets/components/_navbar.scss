@@ -18,3 +18,33 @@
     color: white;
   }
 }
+
+.logo-name {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 25px;
+  margin-left: 50px;
+  &:hover {
+    color: white;
+  }
+}
+
+.logo-name h3 {
+  margin: 0;
+}
+
+.fa-user {
+  font-size: 20px;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+.fa-bars {
+  margin-left: 50px;
+}
+
+.nav-link {
+  color: white;
+  margin-right: 50px;
+}
