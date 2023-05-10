@@ -1,10 +1,25 @@
 <div class="container">
-  <div class="row py-4">
-    <div class="col-md-3"><%= image_tag @order.product.photo, width: '100%' %></div>
-    <div class="col">
-      <h1>Checkout summary</h1>
-      <p>Purchase of <strong><%= @order.product.name %></strong> for <strong><%= humanized_money_with_symbol @order.amount %></strong></p>
-      <button id="pay" class="btn btn-primary">Pay</button>
+  <h1 class="text-center margin-top-50px">Obrigado por comprar com a gente!</h1>
+  <div class="row py-4 text-center">
+    <div class="col-md-4">
+      <h5 class="margin-top-10px">Siga Maria do Mato no instagram</h5>
+      <div class="d-flex justify-content-center margin-top-10px">
+        <a href="https://www.instagram.com/amariadomato/" target="_blank">
+          <i class="fa-brands fa-instagram" style="color: #344738;"></i>
+        </a>
+        <a href="https://www.instagram.com/amariadomato/" target="_blank" , class="margin-bottom-0px p-payment">
+          <p class="mb-0">/amariadomato</p>
+        </a>
+      </div>
+      <br>
+      <img src="https://cdn.discordapp.com/attachments/636310644630618142/1097639051428900874/png_20220811_022426_0000.png" height="250px", class="photo-maria">
+      <p class="margin-top-10px">Use o cupom <strong>BEMVINDE</strong> para 5% de desconto na primeira compra!</p>
+    </div>
+    <div class="col"><%= image_tag @order.product.photo, height: '350px' %>
+      <br>
+      <br>
+      <p class="text-center"><strong><%= @order.product.name %></strong> por <strong><%= humanized_money_with_symbol @order.amount %></strong></p>
+      <button id="pay" class="button-confirm">Seguir para compra</button>
       <script src="https://js.stripe.com/v3/"></script>
       <script>
         const paymentButton = document.getElementById('pay');

@@ -1,0 +1,32 @@
+.text-center {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.margin-top-50px {
+  margin-top: 50px;
+}
+
+.margin-bottom-0px {
+  margin-bottom: 0px;
+}
+
+.margin-top-10px {
+  margin-top: 10px;
+}
+
+.p-payment {
+  place-self: center;
+  font-size: 20px;
+  margin-left: 10px;
+  color: #527156;
+  font-style: none;
+  text-decoration: none;
+  &:hover {
+    color: #527156;
+  }
+}
+
+.photo-maria {
+  border-radius: 50%;
+}

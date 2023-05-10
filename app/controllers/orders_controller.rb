@@ -17,8 +17,8 @@ class OrdersController < ApplicationController
         },
         quantity: 1,
         }],
-        mode: 'payment',
         allow_promotion_codes: true,
+        mode: 'payment',
         success_url: order_url(order),
       )
 
