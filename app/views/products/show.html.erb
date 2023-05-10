@@ -29,8 +29,10 @@
     </div>
   </div>
 </div>
-<div class="buttons-show">
-  <%= link_to 'Editar Produto', edit_product_path(@product), class:"button-confirm" %>
+<% if policy(Product).create? %>
+  <div class="buttons-show">
+    <%= link_to 'Editar Produto', edit_product_path(@product), class:"button-confirm" %>
 
-  <%= link_to 'Remover Produto', product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Você tem certeza ?"}, class:"button-delete" %>
-</div>
+    <%= link_to 'Remover Produto', product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Você tem certeza ?"}, class:"button-delete" %>
+  </div>
+<% end %>
