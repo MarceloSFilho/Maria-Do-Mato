@@ -1,0 +1,66 @@
+.spotify-content {
+  height: 300px;
+  background-image: linear-gradient(rgb(62, 73, 62), rgb(33, 37, 33));
+  margin-top: 20px;
+}
+
+.margin-top-100px {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.photo-spotify-maria {
+  padding: 25px;
+  padding-left: 40px;
+  margin-right: 40px !important;
+}
+
+.img-shadow {
+  box-shadow: rgb(30, 41, 30) 0px 0px 20px 1px
+}
+
+.playlist {
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.name-playlist {
+  color: white;
+  font-size: 85px;
+  font-weight: bold;
+}
+
+.redirect-spotify {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: white;
+  }
+}
+
+.content-spotify {
+  height: 300px;
+  display: grid;
+  align-content: center;
+}
+
+.margin-0px {
+  margin: 0px;
+  background: white;
+  padding: 5px;
+  box-shadow: #1e1c1c 6px 6px 7px 3px;
+  color: rgb(33, 37, 33);
+  border-radius: 0px 15px 15px 0px;
+  font-weight: bold;
+}
+
+.fa-circle-play {
+  font-size: 35px;
+  margin-right: 5px;
+}
+
+.button-spotify-redirect{
+  display: flex;
+}

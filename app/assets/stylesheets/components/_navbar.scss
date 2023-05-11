@@ -24,7 +24,6 @@
   cursor: pointer;
   text-decoration: none;
   font-size: 25px;
-  margin-left: 50px;
   &:hover {
     color: white;
   }
@@ -47,4 +46,8 @@
 .nav-link {
   color: white;
   margin-right: 50px;
+}
+
+.margin-left-50px {
+  margin-left: 50px;
 }
