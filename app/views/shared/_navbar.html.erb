@@ -2,42 +2,41 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
 
 <!-- começo do modal -->
+  <% if user_signed_in? %>
+    <div class="container-fluid" data-controller="on-click">
+      <div class="display-none modal-all" data-on-click-target="overlay"></div>
+      <div class="d-none modal-all-pages" data-on-click-target="modal">
+        <div class="modal-lines">
+          <div class="exit-modal" data-action="click->on-click#removeModal click->on-click#removeOverlay" >X Fechar</div>
+        </div>
+        <% if policy(Product).create? %>
+          <div class="modal-lines">
+            <%= link_to 'Adicionar Produto', new_product_path, class:"modal-links" %>
+          </div>
+        <% end %>
+        <div class="modal-lines">
+          <%= link_to 'Todos os Produtos', products_path, class:"modal-links" %>
+        </div>
+        <div class="modal-lines">
+          <%= link_to 'Todos os Produtos', products_path, class:"modal-links" %>
+        </div>
+        <div class="modal-lines">
+          <%= link_to 'Todos os Produtos', products_path, class:"modal-links" %>
+        </div>
+        <div class="modal-lines">
+          <%= link_to 'Todos os Produtos', products_path, class:"modal-links" %>
+        </div>
+        <div class="modal-lines">
+          <%= link_to 'Todos os Produtos', products_path, class:"modal-links" %>
+        </div>
+      </div>
 
-  <div class="container-fluid" data-controller="on-click">
-    <div class="display-none modal-all" data-on-click-target="overlay"></div>
-    <div class="d-none modal-all-pages" data-on-click-target="modal">
-      <div class="modal-lines">
-        <div class="exit-modal" data-action="click->on-click#removeModal click->on-click#removeOverlay" >X Fechar</div>
-      </div>
-      <div class="modal-lines">
-        <%= link_to 'Adicionar Produto', new_product_path, class:"modal-links" %>
-      </div>
-      <div class="modal-lines">
-        <%= link_to 'Todos os Produtos', products_path, class:"modal-links" %>
-      </div>
-      <div class="modal-lines">
-        <%= link_to 'Todos os Produtos', products_path, class:"modal-links" %>
-      </div>
-      <div class="modal-lines">
-        <%= link_to 'Todos os Produtos', products_path, class:"modal-links" %>
-      </div>
-      <div class="modal-lines">
-        <%= link_to 'Todos os Produtos', products_path, class:"modal-links" %>
-      </div>
-      <div class="modal-lines">
-        <%= link_to 'Todos os Produtos', products_path, class:"modal-links" %>
-      </div>
-    </div>
+      <i class="fa-solid fa-bars fa-navbar navbar-brand" data-action="click->on-click#addModal click->on-click#addOverlay"></i>
+      <%= link_to "Maria do Mato", root_path, class: "logo-name" %>
+    <% else %>
+      <%= link_to "Maria do Mato", root_path, class: "logo-name margin-left-50px" %>
+    <% end %>
 
-<!-- final do modal -->
-
-    <i class="fa-solid fa-bars fa-navbar navbar-brand" data-action="click->on-click#addModal click->on-click#addOverlay"></i>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <%= link_to "Maria do Mato", root_path, class: "logo-name" %>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
