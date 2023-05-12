@@ -20,6 +20,8 @@ gem 'pundit'
 
 gem 'pg_search'
 
+gem 'pagy'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 

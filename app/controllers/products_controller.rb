@@ -1,13 +1,16 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:index, :show]
+  include Pagy::Backend
 
   def index
     if params[:query].present?
-      @products = Product.search_by_products(params[:query])
       @product = policy_scope(Product)
+      @products = Product.search_by_products(params[:query])
+      @pagy, @products = pagy_countless(@products, items: 16)
     else
       @products = policy_scope(Product)
+      @pagy, @products = pagy_countless(@products, items: 16)
     end
   end
 

@@ -17,3 +17,35 @@
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+
+.paginate {
+  display: flex;
+  justify-content: center;
+}
+
+.page-item {
+  color: #527156;
+}
+
+.pagination {
+  border: solid #527156 1px;
+}
+
+a.page-link {
+  background: #527156;
+  border-color: #527156;
+}
+
+.page-item:first-child .page-link {
+  background: white;
+  border-color: #527156;
+  color: #527156;
+  font-weight: bold;
+}
+
+.page-item:not(:first-child) .page-link {
+  background-color: white;
+  border-color: #527156;
+  color: #527156;
+  font-weight: bold;
+}
