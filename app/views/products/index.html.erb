@@ -9,7 +9,6 @@
   <% end %>
   <div class="row product-wrapper">
 
-
   <% @products.each do |product| %>
 
     <div class="col-md-3 highlight-session">
@@ -33,6 +32,7 @@
 
     <% end %>
   </div>
+
   <div class="paginate">
     <%= raw pagy_bootstrap_nav(@pagy) %>
   </div>

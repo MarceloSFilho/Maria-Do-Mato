@@ -27,39 +27,35 @@
 <div class="img-sales">
 <img src="https://terramor.com.br/wp-content/uploads/2022/08/final01-1024x99.png"></div>
 <!-- Destaque -->
+
+<h1 class="text-c">Destaques</h1>
 <div class="container">
-  <h1 class="text-c">Destaque</h1>
   <div class="row product-wrapper">
-    <div class="col-md-3 highlight-session">
-      <img src="https://terramor.com.br/wp-content/uploads/2021/08/CAPA-1-10.jpg" height="400px">
-      <div class="product-price">
-        <p class="text-c-products-highlight">Nome do Produto</p>
-        <p class="price-products-highlight">R$ 19,30</p>
+
+    <% @products.each do |product| %>
+
+      <div class="col-md-3 highlight-session">
+
+        <div data-controller="on-hover">
+          <div class="img-container">
+            <%= link_to cl_image_tag(product.photo.key, height: 400, width: 300, class:"photo-edit", data: {action: "mouseover->on-hover#revealContent mouseout->on-hover#addContent"}), product_path(product) %>
+          </div>
+            <%= form_with url: orders_path do %>
+              <%= hidden_field_tag 'product_id', product.id %>
+              <%= submit_tag 'COMPRAR', class:'button-card d-none', data: {on_hover_target: "infos", action: "mouseover->on-hover#revealContent mouseout->on-hover#addContent"}%>
+            <% end %>
+          </div>
+
+        <div class="product-price">
+          <p class="text-c-products-highlight"><%= product.name.capitalize %></p>
+          <p class="price-products-highlight">R$<%= product.price %></p>
+        </div>
+
       </div>
-    </div>
-    <div class="col-md-3 highlight-session">
-      <img src="https://terramor.com.br/wp-content/uploads/2021/08/CAPA-1-10.jpg" height="400px">
-      <div class="product-price">
-        <p class="text-c-products-highlight">Nome do Produto</p>
-        <p class="price-products-highlight">R$ 19,30</p>
-      </div>
-    </div>
-    <div class="col-md-3 highlight-session">
-      <img src="https://terramor.com.br/wp-content/uploads/2021/08/CAPA-1-10.jpg" height="400px">
-      <div class="product-price">
-        <p class="text-c-products-highlight">Nome do Produto</p>
-        <p class="price-products-highlight">R$ 19,30</p>
-      </div>
-    </div>
-    <div class="col-md-3 highlight-session">
-      <img src="https://terramor.com.br/wp-content/uploads/2021/08/CAPA-1-10.jpg" height="400px">
-      <div class="product-price">
-        <p class="text-c-products-highlight">Nome do Produto</p>
-        <p class="price-products-highlight">R$ 19,30</p>
-      </div>
-    </div>
+    <% end %>
   </div>
 </div>
+
 <div class="a-btn-view-more">
   <%= link_to 'Ver Mais', products_path, class:"btn-view-more" %>
 </div>
@@ -93,39 +89,36 @@
 
 <!-- Novidades -->
 
+<h1 class="text-c">Novidades</h1>
 <div class="container">
-  <h1 class="text-c">Novidades</h1>
   <div class="row product-wrapper">
-    <div class="col-md-3 highlight-session">
-      <img src="https://terramor.com.br/wp-content/uploads/2021/08/CAPA-1-10.jpg" height="400px">
-      <div class="product-price">
-        <p class="text-c-products-highlight">Nome do Produto</p>
-        <p class="price-products-highlight">R$ 19,30</p>
+
+
+    <% @products.each do |product| %>
+
+      <div class="col-md-3 highlight-session">
+
+        <div data-controller="on-hover">
+          <div class="img-container">
+            <%= link_to cl_image_tag(product.photo.key, height: 400, width: 300, class:"photo-edit", data: {action: "mouseover->on-hover#revealContent mouseout->on-hover#addContent"}), product_path(product) %>
+          </div>
+            <%= form_with url: orders_path do %>
+              <%= hidden_field_tag 'product_id', product.id %>
+              <%= submit_tag 'COMPRAR', class:'button-card d-none', data: {on_hover_target: "infos", action: "mouseover->on-hover#revealContent mouseout->on-hover#addContent"}%>
+            <% end %>
+          </div>
+
+        <div class="product-price">
+          <p class="text-c-products-highlight"><%= product.name.capitalize %></p>
+          <p class="price-products-highlight">R$<%= product.price %></p>
+        </div>
+
       </div>
-    </div>
-    <div class="col-md-3 highlight-session">
-      <img src="https://terramor.com.br/wp-content/uploads/2021/08/CAPA-1-10.jpg" height="400px">
-      <div class="product-price">
-        <p class="text-c-products-highlight">Nome do Produto</p>
-        <p class="price-products-highlight">R$ 19,30</p>
-      </div>
-    </div>
-    <div class="col-md-3 highlight-session">
-      <img src="https://terramor.com.br/wp-content/uploads/2021/08/CAPA-1-10.jpg" height="400px">
-      <div class="product-price">
-        <p class="text-c-products-highlight">Nome do Produto</p>
-        <p class="price-products-highlight">R$ 19,30</p>
-      </div>
-    </div>
-    <div class="col-md-3 highlight-session">
-      <img src="https://terramor.com.br/wp-content/uploads/2021/08/CAPA-1-10.jpg" height="400px">
-      <div class="product-price">
-        <p class="text-c-products-highlight">Nome do Produto</p>
-        <p class="price-products-highlight">R$ 19,30</p>
-      </div>
-    </div>
+
+    <% end %>
   </div>
 </div>
+
 <div class="a-btn-view-more">
   <%= link_to 'Ver Mais', products_path, class:"btn-view-more" %>
 </div>
