@@ -1,0 +1,64 @@
+.login-inputs {
+  background-color: white;
+  padding: 0;
+  align-self: center;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.form-login-inputs {
+  text-align: -webkit-center;
+}
+
+.login-style {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.photo-maria-login {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+}
+
+.img-login-maria {
+  padding: 0;
+}
+
+.box-login {
+  box-shadow: gray 0px 0px 10px 5px;
+}
+
+.user_remember_me {
+  display: flex;
+  margin-bottom: 0 !important;
+  padding: 10px;
+}
+
+.form-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.buttom-login {
+  padding: 10px;
+  background: #527156;
+  color: white;
+  &:hover {
+    background: #527156;
+    color: white;
+  }
+}
+
+.links-login {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 100px;
+}
+
+.photo-top-login {
+  margin-bottom: 30px;
+  border-radius: 50%;
+}
