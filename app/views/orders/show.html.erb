@@ -2,7 +2,7 @@
   <h1 class="text-center margin-top-50px">Volte sempre!</h1>
 
   <div class="text-center">
-    <h3 class="margin-top-50px">Seu produto foi pago, e está em produção!</h3>
+    <h3 class="margin-top-50px">Seu produto está <%= @order.state %>, e logo estará em produção!</h3>
     <div class="product-image-pay margin-top-10px">
         <%= image_tag @order.product.photo, height: '300px' %>
       </div>
