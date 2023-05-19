@@ -7,8 +7,7 @@
                label: :Nome,
                placeholder: "Digite o nome do produto...",
                required: true,
-               autofocus: true,
-               input_html: { maxlength: 21 } %>
+               autofocus: true %>
 
   <%= f.input :price,
                label: :Preço,
@@ -18,8 +17,7 @@
   <%= f.input :description,
                label: :Descrição,
                placeholder: "Digite a descrição do produto...",
-               required: true,
-               input_html: { maxlength: 300 } %>
+               required: true %>
 
   <%= f.button :submit, value:"Criar Produto", class:"button-confirm" %>
 <% end %>

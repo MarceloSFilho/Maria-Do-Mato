@@ -1,5 +1,5 @@
 <div class="container">
-  <h1 class="text-center mt-50">Editar <%= @product.name %></h1>
+  <h1 class="text-center mt-50">Editar Produto</h1>
   <div class="row">
     <div class="col">
       <div class="edit-session">
@@ -15,7 +15,7 @@
         </div>
       </div>
     </div>
-    <div class="col align-edit">
+    <div class="col">
       <%= simple_form_for @product, html: {class:"input-edit"} do |f| %>
         <%= f.input :photo, as: :file,
                     label: :Foto,
@@ -25,8 +25,7 @@
                     label: :Nome,
                     placeholder: "Digite o nome do produto...",
                     required: true,
-                    autofocus: true,
-                    input_html: { maxlength: 21 } %>
+                    autofocus: true %>
 
         <%= f.input :price,
                     label: :Preço,
@@ -38,9 +37,8 @@
                     placeholder: "Digite a descrição do produto...",
                     required: true,
                     input_html: { maxlength: 300 }  %>
-        <div class="edit-buttom-confirm">
-          <%= f.button :submit, value: "Confirmar", class:"button-confirm" %>
-        </div>
+
+        <%= f.button :submit, class:"button-confirm" %>
       <% end %>
     </div>
   </div>

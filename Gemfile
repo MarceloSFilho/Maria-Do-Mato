@@ -16,8 +16,6 @@ gem "money-rails"
 
 gem "stripe"
 
-gem 'stripe_event'
-
 gem 'pundit'
 
 gem 'pg_search'
