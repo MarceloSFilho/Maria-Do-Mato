@@ -38,7 +38,7 @@
   border: 0;
   color: white;
   font-weight: 500;
-  margin: 50px 10px 0px 0px;
+  margin: 50px 0px 0px 0px;
   background: #527156;
   &:hover {
     background: #4f6652;
@@ -52,13 +52,21 @@
   border: 0;
   color: white;
   font-weight: 500;
-  margin: 50px 10px 0px 0px;
+  margin: 50px 0px 0px 0px;
   background: #527156;
   text-decoration: none;
   &:hover {
     background: #4f6652;
     color: white;
   }
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.align-button-edit {
+  margin: 70px;
 }
 
 .button-delete {
