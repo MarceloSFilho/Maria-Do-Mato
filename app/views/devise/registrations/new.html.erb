@@ -1,25 +1,36 @@
-<h2>Sign up</h2>
+<div class="container">
+  <div class="login-style">
+    <div class="row box-login">
+      <div class="col login-inputs">
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+          <div class="form-inputs form-login-inputs">
+          <img src="https://cdn.discordapp.com/attachments/636310644630618142/1097639051428900874/png_20220811_022426_0000.png" width=150px, class="photo-top-login">
+            <%= f.input :email,
+                        placeholder: "Digite seu email",
+                        required: false,
+                        autofocus: true,
+                        input_html: { autocomplete: "email" } %>
+            <%= f.input :password,
+                        placeholder: "Digite sua senha",
+                        label: :Senha,
+                        required: true,
+                        hint: ("#{@minimum_password_length} minimo de caracteres" if @minimum_password_length),
+                        input_html: { autocomplete: "new-password" } %>
+            <%= f.input :password_confirmation,
+                        placeholder: "Confirme sua senha",
+                        label: :"Confirme sua senha",
+                        required: true,
+                        required: true,
+                        input_html: { autocomplete: "new-password" } %>
+          </div>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
-  <%= f.error_notification %>
+          <div class="form-actions">
+            <%= f.button :submit, "Cadastrar", class: "buttom-login" %>
+          </div>
+        <% end %>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+      </div>
+      <div class="col img-login-maria"><img src="https://images.pexels.com/photos/7003468/pexels-photo-7003468.jpeg?auto=compress&cs=tinysrgb&w=600" class="photo-maria-login"></div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
