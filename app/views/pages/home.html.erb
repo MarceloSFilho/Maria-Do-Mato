@@ -32,7 +32,7 @@
 <div class="container">
   <div class="row product-wrapper">
 
-    <% @products.each do |product| %>
+    <% @products.first(4).each do |product| %>
 
       <div class="col-md-3 highlight-session">
 
@@ -94,7 +94,7 @@
   <div class="row product-wrapper">
 
 
-    <% @products.each do |product| %>
+    <% @products.order("id DESC").last(4).each do |product| %>
 
       <div class="col-md-3 highlight-session">
 
