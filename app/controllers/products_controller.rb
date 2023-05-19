@@ -5,11 +5,11 @@ class ProductsController < ApplicationController
 
   def index
     if params[:query].present?
-      @product = policy_scope(Product)
-      @products = Product.search_by_products(params[:query])
+      @product = policy_scope(Product).order("id ASC")
+      @products = Product.search_by_products(params[:query]).order("id ASC")
       @pagy, @products = pagy_countless(@products, items: 16)
     else
-      @products = policy_scope(Product)
+      @products = policy_scope(Product).order("id ASC")
       @pagy, @products = pagy_countless(@products, items: 16)
     end
   end

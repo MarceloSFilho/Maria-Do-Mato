@@ -9,22 +9,16 @@
         <div class="modal-lines">
           <div class="exit-modal" data-action="click->on-click#removeModal click->on-click#removeOverlay" >X Fechar</div>
         </div>
+        <div class="modal-lines">
+          <%= link_to 'Voltar para a Home', root_path, class:"modal-links" %>
+        </div>
         <% if policy(Product).create? %>
           <div class="modal-lines">
             <%= link_to 'Adicionar Produto', new_product_path, class:"modal-links" %>
           </div>
         <% end %>
         <div class="modal-lines">
-          <%= link_to 'Todos os Produtos', products_path, class:"modal-links" %>
-        </div>
-        <div class="modal-lines">
-          <%= link_to 'Todos os Produtos', products_path, class:"modal-links" %>
-        </div>
-        <div class="modal-lines">
-          <%= link_to 'Todos os Produtos', products_path, class:"modal-links" %>
-        </div>
-        <div class="modal-lines">
-          <%= link_to 'Todos os Produtos', products_path, class:"modal-links" %>
+          <%= link_to 'Editar Perfil', edit_user_registration_path, class:"modal-links" %>
         </div>
         <div class="modal-lines">
           <%= link_to 'Todos os Produtos', products_path, class:"modal-links" %>
