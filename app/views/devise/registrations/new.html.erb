@@ -2,24 +2,27 @@
   <div class="login-style">
     <div class="row box-login">
       <div class="col login-inputs">
-        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
+          <%= f.error_notification %>
+
           <div class="form-inputs form-login-inputs">
-          <img src="https://cdn.discordapp.com/attachments/636310644630618142/1097639051428900874/png_20220811_022426_0000.png" width=150px, class="photo-top-login">
+
+            <img src="https://cdn.discordapp.com/attachments/636310644630618142/1097639051428900874/png_20220811_022426_0000.png" width=150px, class="photo-top-login">
             <%= f.input :email,
                         placeholder: "Digite seu email",
-                        required: false,
+                        required: true,
                         autofocus: true,
-                        input_html: { autocomplete: "email" } %>
+                        input_html: { autocomplete: "email" }%>
             <%= f.input :password,
                         placeholder: "Digite sua senha",
                         label: :Senha,
                         required: true,
-                        hint: ("#{@minimum_password_length} minimo de caracteres" if @minimum_password_length),
+                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                         input_html: { autocomplete: "new-password" } %>
             <%= f.input :password_confirmation,
                         placeholder: "Confirme sua senha",
                         label: :"Confirme sua senha",
-                        required: true,
                         required: true,
                         input_html: { autocomplete: "new-password" } %>
           </div>
@@ -30,7 +33,9 @@
         <% end %>
 
       </div>
-      <div class="col img-login-maria"><img src="https://i.pinimg.com/564x/b0/91/d6/b091d6c122e747dca1fc4fd80a2f1e52.jpg" class="photo-maria-login"></div>
+      <div class="col img-login-maria">
+        <img src="https://i.pinimg.com/564x/b0/91/d6/b091d6c122e747dca1fc4fd80a2f1e52.jpg" class="photo-maria-login">
+      </div>
     </div>
   </div>
 </div>
