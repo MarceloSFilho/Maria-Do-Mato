@@ -7,7 +7,7 @@
         <%= image_tag @order.product.photo, height: '300px' %>
       </div>
     <P class="margin-top-10px"><strong><%= @order.product.name %></strong></P>
-    <p><strong>PREÇO</strong> <%= humanized_money_with_symbol @order.amount %></p>
+    <p><strong>PREÇO</strong> <%= humanized_money_with_symbol @order.amount, class:"price-orders-show"%></p>
   </div>
   <br>
   <h2 class="margin-top-100px">Escute a nossa playlist no Spotify</h2>
